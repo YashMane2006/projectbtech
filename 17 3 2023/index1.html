@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SORTING VISUALIZER</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-row-padding" id="myHeader" style="background-color:#00b36d !important;">
+  <i onclick="w3_open()" class=" w3-theme"></i> <br><br>
+  <div class="w3-third">
+    <img src="yspm.png" style="">
+  </div>
+  <div class="w3-third">
+  <h4 style="color:black;text-align: center;">Visualize the sorting algorithms and performs the operation</h4>
+  <h1 class="w3-xxlarge w3-animate-bottom" style="font-weight: 500; color: black;text-align: center;">SORTING VISUALIZER </h1> 
+  </div>
+  <div class="w3-third">
+    <img src="db.png" style="float: right;">
+  </div>
+  <br><br><br>
+
+</header>
+
+<!-- Modal -->
+
+
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Bubble Sort</h3><br>
+  <i class="fa fa-signal w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p style="text-align: justify;
+  text-justify: inter-word;">Bubble sort is a data sorting algorithm that works by randomly copying elements from the first array into a smaller second array, and then reversing the order of these arrays. After this process has been repeated multiple times, the sorted data will be located in the middle of the larger array.</p>
+  <a href="BubbleSort.html" class="w3-button w3-theme" style="background-color:#00b36d !important;">Bubble Sort</a>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Insertion Sort</h3><br>
+  <i class="fa fa-signal w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p style="text-align: justify;
+  text-justify: inter-word;">An insertion sort compares values in turn, starting with 
+the second value in the list. If this value is greater 
+than the value to the left of it, no changes are made. 
+Otherwise this value is repeatedly moved left until it 
+meets a value that is less than it. </p>
+  <br>
+  <a href="InsertionSort.html" class="w3-button w3-theme" style="background-color:#00b36d !important;">Insertion Sort</a>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Selection Sort</h3><br>
+  <i class="fa fa-signal w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p style="text-align: justify;
+  text-justify: inter-word;">Selection sort finds the smallest element in the array 
+and place it on the first place on the list, then it 
+finds the second smallest element in the array and place 
+it on the second place. This process continues until 
+all the elements are moved to their correct ordering.</p>
+  <br>
+  <a href="SelectionSort.html" class="w3-button w3-theme" style="background-color:#00b36d !important;">Selection Sort</a>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Quick Sort</h3><br>
+  <i class="fa fa-signal w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p style="text-align: justify;
+  text-justify: inter-word;"> Quicksort is a divide-and-conquer algorithm. It works by 
+selecting a 'pivot' element from the array and partitioning 
+the other elements into two sub-arrays, according to whether 
+they are less than or greater than the pivot. </p>
+  <br>
+  <a href="QuickSort11.html"  class="w3-button w3-theme" style="background-color:#00b36d !important;">Quick Sort</a>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Merge Sort</h3><br>
+  <i class="fa fa-signal w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p style="text-align: justify;
+  text-justify: inter-word;">Merge sort follows divide and conquer approach in which, 
+the list is first divided into the sets of equal elements 
+and then each half of the list is sorted by using merge sort. 
+The sorted list is combined again to form an elementary 
+sorted array.</p>
+  <br>
+  <a href="MergeSort123.html"  class="w3-button w3-theme" style="background-color:#00b36d !important;">Merge Sort</a>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
